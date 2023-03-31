@@ -3,6 +3,7 @@ use crate::commands::Command;
 use netlink_rust::generic;
 use netlink_rust::{Attribute, ConvertFrom, Error, HardwareAddress, MessageMode, Socket};
 use crate::regulatory::RegulatoryInformation;
+use crate::survey::{SurveyInformation, SurveyResult};
 use std::fmt;
 use std::io;
 
@@ -273,10 +274,17 @@ impl WirelessInterface {
         loop {
             let messages = socket.receive_messages()?;
             if messages.is_empty() {
-                println!("Empty");
                 break;
             }
-            println!("Messages {}", messages.len());
+            for m in messages {
+                let (_, msg) = generic::Message::unpack(&m.data)?;
+                if msg.command == Command::NewSurveyResults {
+                    let info = SurveyInformation::from_message(&msg)?;
+                    println!("{}", info);
+                } else {
+                    println!("{:?}", Command::from(msg.command));
+                }
+            }
         }
         Ok(())
     }

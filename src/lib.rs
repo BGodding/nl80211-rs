@@ -16,6 +16,7 @@ mod frame;
 pub mod information_element;
 mod information_element_ids;
 mod regulatory;
+mod survey;
 mod unpack;
 mod wireless_interface;
 mod wireless_phy;

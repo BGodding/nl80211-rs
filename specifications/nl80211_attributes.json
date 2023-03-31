@@ -2185,6 +2185,90 @@
         }
       }
     },
+    "SurveyInformationAttributes": {
+      "original_name": "nl80211_survey_info",
+      "value_type": "u16",
+      "items": {
+        "Invalid": {
+          "value": 0,
+          "original_name": "__NL80211_SURVEY_INFO_INVALID",
+          "data_type": "bytes",
+          "data_length": 0
+        },
+        "Frequency": {
+          "value": 1,
+          "original_name": "NL80211_SURVEY_INFO_FREQUENCY",
+          "data_type": "u32",
+          "data_length": 0
+        },
+        "Noise": {
+          "value": 2,
+          "original_name": "NL80211_SURVEY_INFO_NOISE",
+          "data_type": "u8",
+          "data_length": 0
+        },
+        "InUse": {
+          "value": 3,
+          "original_name": "NL80211_SURVEY_INFO_IN_USE",
+          "data_type": "u8",
+          "data_length": 0
+        },
+        "Time": {
+          "value": 4,
+          "original_name": "NL80211_SURVEY_INFO_TIME",
+          "data_type": "u32",
+          "data_length": 0
+        },
+        "TimeBusy": {
+          "value": 5,
+          "original_name": "NL80211_SURVEY_INFO_TIME_BUSY",
+          "data_type": "u32",
+          "data_length": 0
+        },
+        "TimeExtBusy": {
+          "value": 6,
+          "original_name": "NL80211_SURVEY_INFO_TIME_EXT_BUSY",
+          "data_type": "u32",
+          "data_length": 0
+        },
+        "TimeRx": {
+          "value": 7,
+          "original_name": "NL80211_SURVEY_INFO_TIME_RX",
+          "data_type": "u32",
+          "data_length": 0
+        },
+        "TimeTx": {
+          "value": 8,
+          "original_name": "NL80211_SURVEY_INFO_TIME_TX",
+          "data_type": "u32",
+          "data_length": 0
+        },
+        "TimeScan": {
+          "value": 9,
+          "original_name": "NL80211_SURVEY_INFO_TIME_SCAN",
+          "data_type": "u32",
+          "data_length": 0
+        },
+        "Padding": {
+          "value": 10,
+          "original_name": "NL80211_SURVEY_INFO_PAD",
+          "data_type": "u32",
+          "data_length": 0
+        },
+        "BssRx": {
+          "value": 11,
+          "original_name": "NL80211_SURVEY_INFO_TIME_BSS_RX",
+          "data_type": "u32",
+          "data_length": 0
+        },
+        "FrequencyOffset": {
+          "value": 12,
+          "original_name": "NL80211_SURVEY_INFO_FREQUENCY_OFFSET",
+          "data_type": "u32",
+          "data_length": 0
+        }
+      }
+    },
     "FrequencyAttribute": {
       "original_name": "nl80211_frequency_attr",
       "value_type": "u16",
